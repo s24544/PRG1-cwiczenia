@@ -1,5 +1,6 @@
-bin#include <iostream>
+#include <iostream>
 #include <string>
+//do poprawy
 auto main() -> int{
 std::string pass = "student";
 std::string password;

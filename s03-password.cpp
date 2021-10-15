@@ -1,4 +1,4 @@
-#include <iostream>
+bin#include <iostream>
 #include <string>
 auto main() -> int{
 std::string pass = "student";

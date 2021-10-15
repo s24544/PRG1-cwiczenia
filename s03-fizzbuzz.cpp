@@ -1,5 +1,5 @@
 #include <iostream>
-#include <random>
+
 auto main(int argc, char *argv[]) -> int{
 int liczba = atoi(argv[1]);
 if(argc !=2){

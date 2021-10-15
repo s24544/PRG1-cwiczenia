@@ -21,7 +21,6 @@ else{
 std::cout << i << "\n";
 }
 }
-
 return 0;
 }
 }

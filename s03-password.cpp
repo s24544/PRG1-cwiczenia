@@ -1,16 +1,21 @@
 #include <iostream>
 #include <string>
-//do poprawy
-auto main() -> int{
-std::string pass = "student";
-std::string password;
 
+auto main (int argc, char *argv[]) -> int{
+auto password = std::string{argv[1]};
+auto podaj = std::string{};
+if(argc != 2){
+std::cout << "Nieprawidłowa ilość argumentów!";
+return 1;
+}
+else
+{
 do{
 std::cout << "Podaj hasło: ";
-std::cin >> password;
+std::cin >> podaj;
 std::cout << "\n";
-
-}while(pass.compare(password) != 0);
+}while(password.compare(podaj) != 0);
 std::cout << "ok!\n";
 return 0;
+}
 }

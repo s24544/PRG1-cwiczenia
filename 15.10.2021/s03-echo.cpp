@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 
-//z "ćwiczeniami dodatkowymi"
 auto main(int argc, char *argv[]) -> int{
 if(argc < 2){
 std::cout << "Nieprawidłowa ilość argumentów\n";

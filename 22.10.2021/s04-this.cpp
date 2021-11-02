@@ -2,11 +2,14 @@
 
 struct To{
 	To() = default;
-	void druk(){std::cout << this;}
+	void druk()
+	{
+		std::cout << this;
+	}
 };
 
 int main(){
-auto struktura = To{};
+To struktura;
 struktura.druk();
 std::cout << "\n" << &struktura << "\n";
 return 0;

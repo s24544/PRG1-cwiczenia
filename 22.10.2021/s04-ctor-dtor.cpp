@@ -1,10 +1,11 @@
 #include <iostream>
-#include <string>
 
 struct ctor_i_dtor
 {
 	std::string wartosc;
-	ctor_i_dtor(std::string a): wartosc(a){}
+	ctor_i_dtor(std::string wartosc){
+		this->wartosc = wartosc;
+	}
 	~ctor_i_dtor() 
 	{
 		std::cout << "DESTRUCTION! " << wartosc << "\n";

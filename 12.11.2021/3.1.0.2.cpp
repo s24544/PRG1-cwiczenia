@@ -5,9 +5,13 @@
 auto iota(std::vector<int> a, int n, int start) -> void
 {
 	a.resize(n);
-	for (int i = 0; i < start -1; i++)
+	for (int i = 0; i < start-1; i++)
 	{
-		a.push_back(i+start);
+		a[i] = (i+start);
+	}
+	for(int i = 0; i < n; i++)
+	{
+		std::cout << a[i] << "\n";
 	}
 }
 
@@ -17,6 +21,5 @@ int main()
 	int n = 4;
 	int start = 5;
 	iota(a, n, start);
-	std::cout << a[0];
 	return 0;
 }

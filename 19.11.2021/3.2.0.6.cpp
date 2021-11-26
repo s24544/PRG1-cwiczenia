@@ -1,13 +1,12 @@
 #include <iostream>
 #include <string.h>
 
-
-void mem_set(void* x, int ch, size_t ilosc)
+void mem_frob(void* a, size_t ilosc)
 {
-	char* wsk = (char*) x;
+	char* a_wsk = (char*)a;
 	for(size_t i = 0; i < ilosc; i++)
 	{
-		*(wsk+i) = ch;
+		*(a_wsk + i) ^= 42;
 	}
 }
 
@@ -15,10 +14,17 @@ void mem_set(void* x, int ch, size_t ilosc)
 int main()
 {
 	char a[] = "Hello, World!";
-	char x = '-';
-	int n = 5;
 	int dlugosc = strlen(a);
-	mem_set(a, x, n);
+	int ilosc = sizeof(a);
+	
+	for(int i = 0; i < dlugosc; i++)
+	{
+		std::cout << a[i] << " ";
+	}
+	std::cout << "\n";
+
+	mem_frob(a, ilosc);
+
 	for(int i = 0; i < dlugosc; i++)
 	{
 		std::cout << a[i] << " ";

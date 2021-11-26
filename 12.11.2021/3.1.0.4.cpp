@@ -2,10 +2,10 @@
 #include <algorithm>
 #include <vector>
 
-auto amin(std::vector<int> a, int n) -> int
+auto amin(int a[], int n) -> int
 {
 	int indeks, min;
-	a.resize(n);
+	indeks = 0;
 	min = a[0];
 	for (int i = 0 ; i < n; i++)
 	{
@@ -20,8 +20,19 @@ auto amin(std::vector<int> a, int n) -> int
 
 int main()
 {
-	std::vector<int> a = {42, 9, -1, 18, 59, 3, 101, 31, 72, 12};
-	int n = 10;
+	int a[100], n, element;
+	do
+	{
+		std::cout << "Podaj rozmiar tablicy (max 100): " << "\n";
+		std::cin >> n;
+	}while(n <= 1 || n >= 100);
+	for(int i = 0;i < n; i++)
+	{
+		std::cout << "\n";
+		std::cout << "Podaj " << i << " element tablicy: ";
+		std::cin >> element;
+		a[i] = element;
+	}
 	std::cout << amin(a, n);
 	return 0;
 }

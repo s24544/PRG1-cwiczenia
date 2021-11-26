@@ -2,9 +2,8 @@
 #include <vector>
 #include <algorithm>
 
-auto iota(std::vector<int> a, int n, int start) -> void
+auto iota(int a[], int n, int start) -> void
 {
-	a.resize(n);
 	for (int i = 0; i < start-1; i++)
 	{
 		a[i] = (i+start);
@@ -17,9 +16,14 @@ auto iota(std::vector<int> a, int n, int start) -> void
 
 int main()
 {
-	std::vector<int> a;
-	int n = 4;
-	int start = 5;
+	int a[100], n, start;
+	do
+	{
+		std::cout << "Podaj rozmiar tablicy (max 100): " << "\n";
+		std::cin >> n;
+		std::cout << "Podaj początek odliczania (start):\n";
+		std::cin >> start;
+	}while(n <= 1 || n >= 100);
 	iota(a, n, start);
 	return 0;
 }

@@ -2,9 +2,8 @@
 #include <algorithm>
 #include <vector>
 
-auto sort_asc(std::vector<int> a, int n) -> void
+auto sort_asc(int a[], int n) -> void
 {
-	a.resize(n);
 	for(int i = 0;i < n; i++)
 	{
 		for(int j = 0; j < n - 1; j++)
@@ -23,8 +22,19 @@ auto sort_asc(std::vector<int> a, int n) -> void
 
 int main()
 {
-	std::vector<int> a = {42, 9, -1, 18, 59, 3, 101, 31, 72, 12};
-	signed int n = 10;
+	int a[100], n, element;
+	do
+	{
+		std::cout << "Podaj rozmiar tablicy (max 100): " << "\n";
+		std::cin >> n;
+	}while(n <= 1 || n >= 100);
+	for(int i = 0;i < n; i++)
+	{
+		std::cout << "\n";
+		std::cout << "Podaj " << i << " element tablicy: ";
+		std::cin >> element;
+		a[i] = element;
+	}
 	sort_asc(a, n);
 	return 0;
 }

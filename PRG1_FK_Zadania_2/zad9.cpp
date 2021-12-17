@@ -26,6 +26,8 @@ int main()
 {
     std::vector<std::string> vec1 = {"Ala", "ma", "kota"};
     std::vector<std::string> vec2 = {"Ala", "nie ma", "kota"};
+    std::cout << contains_all(vec1, vec2) << "\n";
+    vec2={"Ala", "kota"};
     std::cout << contains_all(vec1, vec2);
     return 0;
 }
